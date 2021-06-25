@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form submission</title>
+</head>
+
+<body>
+
+
+
+    <div class="all-form">
+        <h1>Form Registration</h1>
+        <div class="form-container">
+            <form name="google-sheet" method="post" autocomplete="off">
+                <label for="name">Name :</label>
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="email" placeholder="youremail@gmail.com" required><br>
+                <label for="no">Ph NO. :</label>
+                <input type="number" name="no" id="number" placeholder="your number" required><br>
+                <input type="submit" value="submit" id="submit">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxvJA2kZ-cW4qswUOQaY1CZbgSH5vkmDLqb_d4XaLQ2x0XWZ4A5237vlabCUnaBv5Bz/exec'
+              const form = document.forms['google-sheet']
+            
+              form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                  .then(response => alert("You have successfully submitted."))
+                  .catch(error => console.error('Error!', error.message))
+              })
+    </script>
+    <footer>Copyright © 2021 <span> Jovit Mathew</span></footer>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+* {
+  margin: 0%;
+  padding: 0%;
+  outline: none;
+}
+body {
+  height: 96.5vh;
+  background-image: linear-gradient(45deg, #ff00f9d1, #ff9d00f0);
+  font-size: larger;
+  font-family: 'Lora', serif;
+}
+.all-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+h1{
+    color: white;
+    padding-bottom: 8vh;
+}
+.form-container {
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 2px rgb(0 0 0 / 45%);
+  width: min-content;
+  height: auto;
+  border: 1px solid black;
+  overflow: hidden;
+}
+form {
+  padding: 3rem;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin: 0px;
+}
+input {
+  margin: 1rem;
+  border-color: rgb(255, 0, 221);
+  border-bottom-width: 1px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-radius: 2px;
+  background-color: white;
+}
+#submit {
+  background-color: blue;
+  border-radius: 20px;
+  width: fit-content;
+  color: white;
+  margin: auto;
+  padding: 0.5rem;
+  width: 7rem;
+}
+footer{
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(212, 212, 212);
+  background-color: rgba(0, 0, 0, 0.74);
+  text-align: center;
+}
+footer span{
+  color: rgb(39, 39, 207);
+  font-weight: 400;
+  padding-left: 12px;
+}
